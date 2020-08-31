@@ -3,16 +3,13 @@ getwd()
 
 ####### pacotes ########
 
-library(dplyr)
-library(tidyverse)
-library(lubridate)
-library(lmtest)
-library(generalhoslem)
-library(corrplot)
-library(FactoMineR)
-library(psych)
-library(MASS)
-library(ordinal)
+pacotes <- c("dplyr","tidyverse","lubridate","lmtest","generalhoslem",
+             "corrplot","FactoMineR","psych","MASS","ordinal")
+
+lapply(pacotes,library,character.only = T)
+
+
+rm(pacotes)
 
 ##### arquivo #####
 
@@ -83,7 +80,7 @@ lazer <- intatel_On$Nos.momentos.de.lazer.o.que.voce.gosta.de.fazer
 ### "Que.tipo.de.entretenimento.voce.mais.consome" ###
 entr <- intatel_On$Que.tipo.de.entretenimento.voce.mais.consome
 
-### "Dentro.do.cenario.politico.em.que.vivemos..qual.sua.posicão.em.relacão.ao.atual.governo ###
+### "Dentro.do.cenario.politico.em.que.vivemos..qual.sua.posicÃ£o.em.relacÃ£o.ao.atual.governo ###
 pos_gov <- intatel_On$Dentro.do.cenario.politico.em.que.vivemos..qual.sua.posicao.em.relacao.ao.atual.governo
 
 ### Em.que.momento.voce.se.encontra.como.estudante ###
@@ -98,35 +95,35 @@ Q_curso <- intatel_On$Qual.curso.voce.pretende.estudar
 ### Como.voce.se.prepara.para.o.vestibular ###
 prep_vest <- intatel_On$Como.voce.se.prepara.para.o.vestibular
 
-### Qual.o.envolvimento.dos.seus.pais.durante.sua.preparacão.para.o.vestibular ###
+### Qual.o.envolvimento.dos.seus.pais.durante.sua.preparacÃ£o.para.o.vestibular ###
 env_pais <- intatel_On$Qual.o.envolvimento.dos.seus.pais.durante.sua.preparac.o.para.o.vestibular
 
 ### "Como.voce.costuma.buscar.informacoes.sobre.as.instituicoes.de.ensino.onde.voce.gostaria.de.estudar" ###                                            
 bsc_inst_ens <- intatel_On$Como.voce.costuma.busca
 
-### "O.que.voce.considera.importante.na.hora.de.escolher.uma.instituicão.de.ensino.superior.Ser.uma.instituicão.renomada" ##
-imprt_crs <- instui$O.que.voce.considera.importante.na.hora.de.escolher.uma.instituicÆo.de.ensino.superior.Ser.uma.instituicÆo.renomada
+### "O.que.voce.considera.importante.na.hora.de.escolher.uma.instituicÃ£o.de.ensino.superior.Ser.uma.instituicÃ£o.renomada" ##
+imprt_crs <- instui$O.que.voce.considera.importante.na.hora.de.escolher.uma.instituicÃ†o.de.ensino.superior.Ser.uma.instituicÃ†o.renomada
 
-### O.que.voce.considera.importante.na.hora.de.escolher.uma.instituicão.de.ensino.superior.Ser.uma.instituicão.privada ###
-imprt_crs_prvd <- instui$O.que.voce.considera.importante.na.hora.de.escolher.uma.instituicÆo.de.ensino.superior.Ser.uma.instituicÆo.privada
+### O.que.voce.considera.importante.na.hora.de.escolher.uma.instituicÃ£o.de.ensino.superior.Ser.uma.instituicÃ£o.privada ###
+imprt_crs_prvd <- instui$O.que.voce.considera.importante.na.hora.de.escolher.uma.instituicÃ†o.de.ensino.superior.Ser.uma.instituicÃ†o.privada
 
-### O.que.voce.considera.importante.na.hora.de.escolher.uma.instituicão.de.ensino.superior.Ser.uma.instituicão.atualizada.com.o.mercado" ###
-imprt_crs_mrcd <- instui$O.que.voce.considera.importante.na.hora.de.escolher.uma.instituicÆo.de.ensino.superior.Ser.uma.instituicÆo.atualizada.com.o.mercado                                             
+### O.que.voce.considera.importante.na.hora.de.escolher.uma.instituicÃ£o.de.ensino.superior.Ser.uma.instituicÃ£o.atualizada.com.o.mercado" ###
+imprt_crs_mrcd <- instui$O.que.voce.considera.importante.na.hora.de.escolher.uma.instituicÃ†o.de.ensino.superior.Ser.uma.instituicÃ†o.atualizada.com.o.mercado                                             
 
-### O.que.voce.considera.importante.na.hora.de.escolher.uma.instituicão.de.ensino.superior.Ser.gratuita.ou.ter.um.preco.acessivel ###
-imprt_crs_prc <- instui$O.que.voce.considera.importante.na.hora.de.escolher.uma.instituicÆo.de.ensino.superior.Ser.gratuita.ou.ter.um.preco.acessivel
+### O.que.voce.considera.importante.na.hora.de.escolher.uma.instituicÃ£o.de.ensino.superior.Ser.gratuita.ou.ter.um.preco.acessivel ###
+imprt_crs_prc <- instui$O.que.voce.considera.importante.na.hora.de.escolher.uma.instituicÃ†o.de.ensino.superior.Ser.gratuita.ou.ter.um.preco.acessivel
 
-### O.que.voce.considera.importante.na.hora.de.escolher.uma.instituicão.de.ensino.superior.Ter.uma.boa.estrutura.fiscia.e.pedagogica" ###     
-imprt_crs_strt <- instui$O.que.voce.considera.importante.na.hora.de.escolher.uma.instituicÆo.de.ensino.superior.Ter.uma.boa.estrutura.fiscia.e.pedagogica   
+### O.que.voce.considera.importante.na.hora.de.escolher.uma.instituicÃ£o.de.ensino.superior.Ter.uma.boa.estrutura.fiscia.e.pedagogica" ###     
+imprt_crs_strt <- instui$O.que.voce.considera.importante.na.hora.de.escolher.uma.instituicÃ†o.de.ensino.superior.Ter.uma.boa.estrutura.fiscia.e.pedagogica   
 
-### "O.que.voce.considera.importante.na.hora.de.escolher.uma.instituicão.de.ensino.superior.Ter.um.bom.indicie.de.empregabilidade.aPos.formado ###
-imprt_crs_mprg <- instui$O.que.voce.considera.importante.na.hora.de.escolher.uma.instituicÆo.de.ensino.superior.Ter.um.bom.indicie.de.empregabilidade.aPos.formado
+### "O.que.voce.considera.importante.na.hora.de.escolher.uma.instituicÃ£o.de.ensino.superior.Ter.um.bom.indicie.de.empregabilidade.aPos.formado ###
+imprt_crs_mprg <- instui$O.que.voce.considera.importante.na.hora.de.escolher.uma.instituicÃ†o.de.ensino.superior.Ter.um.bom.indicie.de.empregabilidade.aPos.formado
 
-### O.que.voce.considera.importante.na.hora.de.escolher.uma.instituicão.de.ensino.superior.Ter.uma.boa.grade.de.ensino.incluindo.aulas.praticas ###
-imprt_crs_grd <- instui$O.que.voce.considera.importante.na.hora.de.escolher.uma.instituicÆo.de.ensino.superior.Ter.uma.boa.grade.de.ensino.incluindo.aulas.praticas
+### O.que.voce.considera.importante.na.hora.de.escolher.uma.instituicÃ£o.de.ensino.superior.Ter.uma.boa.grade.de.ensino.incluindo.aulas.praticas ###
+imprt_crs_grd <- instui$O.que.voce.considera.importante.na.hora.de.escolher.uma.instituicÃ†o.de.ensino.superior.Ter.uma.boa.grade.de.ensino.incluindo.aulas.praticas
 
-### O.que.voce.considera.importante.na.hora.de.escolher.uma.instituicão.de.ensino.superior.Ter.programas.de.intercâmbio ###
-imprt_crs_intr <- instui$O.que.voce.considera.importante.na.hora.de.escolher.uma.instituicÆo.de.ensino.superior.Ter.programas.de.intercfmbio                          
+### O.que.voce.considera.importante.na.hora.de.escolher.uma.instituicÃ£o.de.ensino.superior.Ter.programas.de.intercÃ¢mbio ###
+imprt_crs_intr <- instui$O.que.voce.considera.importante.na.hora.de.escolher.uma.instituicÃ†o.de.ensino.superior.Ter.programas.de.intercfmbio                          
 
 ### O.que.voce.considera.importante.na.hora.de.escolher.uma.instituicao.de.ensino.superior.Ter.programas.de.bolsas.de.estudo.e.estagio.interno ###
 imprt_crs_bls <- instui$O.que.voce.considera.importante.na.hora.de.escolher.uma.instituicao.de.ensino.superior.Ter.programas.de.bolsas.de.estudo.e.estagio.interno
@@ -182,7 +179,7 @@ bsc_inst_ens <- as.factor(paste0(intatel_On$Como.voce.costuma.buscar.informacoes
 
 q_atv <- as.factor(paste0(intatel_On$Quais.das.seguintes.atividades.seriam.do.seu.interesse.enquanto.estudante.de.Graduacao,
                           intatel_On1$Quais.das.seguintes.atividades.seriam.do.seu.interesse.enquanto.estudante.de.PosGraduacao1,
-                          intatel_On2$Quais.das.seguintes.atividades.seriam.do.seu.interesse.enquanto.estudante.de.Graduacao.ou.Pos.GraduacÆo2))
+                          intatel_On2$Quais.das.seguintes.atividades.seriam.do.seu.interesse.enquanto.estudante.de.Graduacao.ou.Pos.GraduacÃ†o2))
                                
 
 imprt_crs_lcl <- as.factor(paste0(intatel_On$Quanto.a.localizacao.da.instituicao.o.que.voce.considera.importante,
@@ -193,34 +190,34 @@ imprt_crs_lcl <- as.factor(paste0(intatel_On$Quanto.a.localizacao.da.instituicao
 
 ####imnportancia dos cursos########################
 
-imprt_crs_rnm  <- import$O.que.voce.considera.importante.na.hora.de.escolher.uma.instituicÆo.de.ensino.superior.Ser.uma.instituicÆo.renomada
+imprt_crs_rnm  <- import$O.que.voce.considera.importante.na.hora.de.escolher.uma.instituicÃ†o.de.ensino.superior.Ser.uma.instituicÃ†o.renomada
 imprt_crs_bls  <- import$O.que.voce.considera.importante.na.hora.de.escolher.uma.instituicao.de.ensino.superior.Ter.programas.de.bolsas.de.estudo.e.estagio.interno
-imprt_crs_grd  <- import$O.que.voce.considera.importante.na.hora.de.escolher.uma.instituicÆo.de.ensino.superior.Ter.atividades.complementares.na.grade.de.ensino
-imprt_crs_intr <- import$O.que.voce.considera.importante.na.hora.de.escolher.uma.instituicÆo.de.ensino.superior.Ter.programas.de.intercfmbio
-imprt_crs_mprg <- import$O.que.voce.considera.importante.na.hora.de.escolher.uma.instituicÆo.de.ensino.superior.Ter.um.bom.indicie.de.empregabilidade.aPos.formado
-imprt_crs_mrcd <- import$O.que.voce.considera.importante.na.hora.de.escolher.uma.instituicÆo.de.ensino.superior.Ser.uma.instituicÆo.atualizada.com.o.mercado
-imprt_crs_prc  <- import$O.que.voce.considera.importante.na.hora.de.escolher.uma.instituicÆo.de.ensino.superior.Ser.gratuita.ou.ter.um.preco.acessivel
-imprt_crs_pbl  <- import$O.que.voce.considera.importante.na.hora.de.escolher.uma.instituicÆo.de.ensino.superior.Ser.uma.instituicÆo.publica
-imprt_crs_prvd <- import$O.que.voce.considera.importante.na.hora.de.escolher.uma.instituicÆo.de.ensino.superior.Ser.uma.instituicÆo.privada
-imprt_crs_strt <- import$O.que.voce.considera.importante.na.hora.de.escolher.uma.instituicÆo.de.ensino.superior.Ter.uma.boa.estrutura.fiscia.e.pedagogica
+imprt_crs_grd  <- import$O.que.voce.considera.importante.na.hora.de.escolher.uma.instituicÃ†o.de.ensino.superior.Ter.atividades.complementares.na.grade.de.ensino
+imprt_crs_intr <- import$O.que.voce.considera.importante.na.hora.de.escolher.uma.instituicÃ†o.de.ensino.superior.Ter.programas.de.intercfmbio
+imprt_crs_mprg <- import$O.que.voce.considera.importante.na.hora.de.escolher.uma.instituicÃ†o.de.ensino.superior.Ter.um.bom.indicie.de.empregabilidade.aPos.formado
+imprt_crs_mrcd <- import$O.que.voce.considera.importante.na.hora.de.escolher.uma.instituicÃ†o.de.ensino.superior.Ser.uma.instituicÃ†o.atualizada.com.o.mercado
+imprt_crs_prc  <- import$O.que.voce.considera.importante.na.hora.de.escolher.uma.instituicÃ†o.de.ensino.superior.Ser.gratuita.ou.ter.um.preco.acessivel
+imprt_crs_pbl  <- import$O.que.voce.considera.importante.na.hora.de.escolher.uma.instituicÃ†o.de.ensino.superior.Ser.uma.instituicÃ†o.publica
+imprt_crs_prvd <- import$O.que.voce.considera.importante.na.hora.de.escolher.uma.instituicÃ†o.de.ensino.superior.Ser.uma.instituicÃ†o.privada
+imprt_crs_strt <- import$O.que.voce.considera.importante.na.hora.de.escolher.uma.instituicÃ†o.de.ensino.superior.Ter.uma.boa.estrutura.fiscia.e.pedagogica
 
 ######importancia dos cursos privados###############
 par(mfrow = c(3,3))
 
 hist(imprt_crs_pbl,
-     xlab = "ser pública?")
+     xlab = "ser pÃºblica?")
 hist(imprt_crs_prvd,
      xlab = "ser privada?")
 hist(imprt_crs_rnm,
      xlab = "ser renomada?")
 hist(imprt_crs_mprg,
-     xlab = "Ter um bom índice de empregabilidade após formado?")
+     xlab = "Ter um bom Ã­ndice de empregabilidade apÃ³s formado?")
 hist(imprt_crs_mrcd,
-     xlab = "Ser uma instituicão atualizada com o mercado?")
+     xlab = "Ser uma instituicÃ£o atualizada com o mercado?")
 hist(imprt_crs_prc,
      xlab = "Ser gratuita ou ter um preco acessivel?")
 hist(imprt_crs_strt,
-     xlab = "Ter uma boa estrutura física e pedagogica?")
+     xlab = "Ter uma boa estrutura fÃ­sica e pedagogica?")
 hist(imprt_crs_grd,
      xlab = "Ter atividades complementares na grade de ensino?")
 hist(imprt_crs_bls,
@@ -235,7 +232,7 @@ par(mfrow = c(2,4))
 plot(imprt_crs_prvd,
      imprt_crs_prc,
       xlab = "considera a escola privada",
-      ylab = "preços")
+      ylab = "preÃ§os")
 
   
 plot(imprt_crs_prvd,
@@ -280,7 +277,7 @@ par(mfrow = c(2,4))
 plot(imprt_crs_pbl,
      imprt_crs_prc,
      xlab = "considera a escola publica",
-     ylab = "preços")  
+     ylab = "preÃ§os")  
 
 plot(imprt_crs_pbl,
      imprt_crs_mrcd,
@@ -336,7 +333,7 @@ colnames(importancia) <- c("bolsa",
                             "emprego",
                            "mercado",
                            "ser publica",
-                           "menor preço",
+                           "menor preÃ§o",
                            "ser privado",
                            "renome",
                            "estrutura")
@@ -394,7 +391,7 @@ summary(qualiNovInd2)
   
 hist(qualiNovInd)  
   
-###correlação com qualidade###
+###correlaÃ§Ã£o com qualidade###
 
 imp_com_quali <- cbind(qualiNovInd,
                        imprt_crs_rnm,
