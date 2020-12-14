@@ -1,4 +1,4 @@
-setwd("C:/Users/Admin/Desktop/Projetos/Inatel")
+setwd("xxxxxxxx")
 getwd()
 
 ####### pacotes ########
@@ -20,20 +20,20 @@ rm(pacotes)
                     stringsAsFactor = T)
 
 
-intatel_On <- read.csv("Inatel.csv",
+Base_On1 <- read.csv("Base1.csv",
                        header = T,
                        sep = ";",
                        dec = ".",
                        stringsAsFactor = T)
 
 
-intatel_On1 <- read.csv("Inatel1.csv",
+Base_On2 <- read.csv("Base2.csv",
                        header = T,
                        sep = ";",
                        dec = ".",
                        stringsAsFactor = T)
 
-intatel_On2 <- read.csv("Inatel2.csv",
+Base_On3 <- read.csv("Base3.csv",
                         header = T,
                         sep = ";",
                         dec = ".",
@@ -47,59 +47,59 @@ import <- read.csv("um_cinco.csv",
 
 ### preliminar ##
 
-names(intatel_On)
+names(Base_On1)
 
 ### renomear e separar ##########
 
 ### "Carimbo.de.data.hora" ###
-date <- intatel_On$Carimbo.de.data.hora
+date <- Base_On1 $Carimbo.de.data.hora
 
 class(age)
 
 ### "Primeiro..poderia.nos.dizer.qual.seu.interesse.academico" ##
-int_acad <- intatel_On$Primeiro..poderia.nos.dizer.qual.seu.interesse.academico
+int_acad <- Base_On1$Primeiro..poderia.nos.dizer.qual.seu.interesse.academico
 
 ### "Qual.sua.idade" ###
-age <- intatel_On$Qual.sua.idade
+age <- Base_On1$Qual.sua.idade
 
 ### "Com.qual.genero.voce.se.identifica" ###
-gnr <- intatel_On$Com.qual.genero.voce.se.identifica
+gnr <- Base_On1$Com.qual.genero.voce.se.identifica
 
 ### Em.qual.regiao.do.Brasil.voce.mora.1 ###
-region <- intatel_On$Em.qual.regiao.do.Brasil.voce.mora
+region <- Base_On1$Em.qual.regiao.do.Brasil.voce.mora
 
 ### Quais.redes.sociais.voce.mais.utiliza ###
-rede_soc <- intatel_On$Quais.redes.sociais.voce.mais.utiliza 
+rede_soc <- Base_On1$Quais.redes.sociais.voce.mais.utiliza 
 
 ### Quais.canais.de.noticia.voce.costuma.acessar ###
-can_notic <- intatel_On$Quais.canais.de.noticia.voce.costuma.acessar
+can_notic <- Base_On1$Quais.canais.de.noticia.voce.costuma.acessar
 
 ### Nos.momentos.de.lazer.o.que.voce.gosta.de.fazer ###
-lazer <- intatel_On$Nos.momentos.de.lazer.o.que.voce.gosta.de.fazer
+lazer <- Base_On1$Nos.momentos.de.lazer.o.que.voce.gosta.de.fazer
 
 ### "Que.tipo.de.entretenimento.voce.mais.consome" ###
-entr <- intatel_On$Que.tipo.de.entretenimento.voce.mais.consome
+entr <- Base_On1$Que.tipo.de.entretenimento.voce.mais.consome
 
 ### "Dentro.do.cenario.politico.em.que.vivemos..qual.sua.posicão.em.relacão.ao.atual.governo ###
-pos_gov <- intatel_On$Dentro.do.cenario.politico.em.que.vivemos..qual.sua.posicao.em.relacao.ao.atual.governo
+pos_gov <- Base_On1$Dentro.do.cenario.politico.em.que.vivemos..qual.sua.posicao.em.relacao.ao.atual.governo
 
 ### Em.que.momento.voce.se.encontra.como.estudante ###
-mom_estd <- intatel_On$Em.que.momento.voce.se.encontra.como.estudante
+mom_estd <- Base_On1$Em.que.momento.voce.se.encontra.como.estudante
 
 ### Como.e.sua.rotina.enquanto.estudante ###
-rot_estd <- intatel_On$Como.e.sua.rotina.enquanto.estudante
+rot_estd <- Base_On1$Como.e.sua.rotina.enquanto.estudante
 
 ### Qual.curso.voce.pretende.estudar### 
-Q_curso <- intatel_On$Qual.curso.voce.pretende.estudar
+Q_curso <- Base_On1$Qual.curso.voce.pretende.estudar
 
 ### Como.voce.se.prepara.para.o.vestibular ###
-prep_vest <- intatel_On$Como.voce.se.prepara.para.o.vestibular
+prep_vest <- Base_On1$Como.voce.se.prepara.para.o.vestibular
 
 ### Qual.o.envolvimento.dos.seus.pais.durante.sua.preparacão.para.o.vestibular ###
-env_pais <- intatel_On$Qual.o.envolvimento.dos.seus.pais.durante.sua.preparac.o.para.o.vestibular
+env_pais <- Base_On1$Qual.o.envolvimento.dos.seus.pais.durante.sua.preparac.o.para.o.vestibular
 
 ### "Como.voce.costuma.buscar.informacoes.sobre.as.instituicoes.de.ensino.onde.voce.gostaria.de.estudar" ###                                            
-bsc_inst_ens <- intatel_On$Como.voce.costuma.busca
+bsc_inst_ens <- Base_On1$Como.voce.costuma.busca
 
 ### "O.que.voce.considera.importante.na.hora.de.escolher.uma.instituicão.de.ensino.superior.Ser.uma.instituicão.renomada" ##
 imprt_crs <- instui$O.que.voce.considera.importante.na.hora.de.escolher.uma.instituicÆo.de.ensino.superior.Ser.uma.instituicÆo.renomada
@@ -129,62 +129,62 @@ imprt_crs_intr <- instui$O.que.voce.considera.importante.na.hora.de.escolher.uma
 imprt_crs_bls <- instui$O.que.voce.considera.importante.na.hora.de.escolher.uma.instituicao.de.ensino.superior.Ter.programas.de.bolsas.de.estudo.e.estagio.interno
 
 ### Quais.das.seguintes.atividades.seriam.do.seu.interesse.enquanto.estudante.de.Graduacao ###
-q_atv <- intatel_On$Quais.das.seguintes.atividades.seriam.do.seu.interesse.enquanto.estudante.de.Graduacao
+q_atv <- Base_On1$Quais.das.seguintes.atividades.seriam.do.seu.interesse.enquanto.estudante.de.Graduacao
 
 ### "Quanto.a.localizacao.da.instituicao.o.que.voce.considera.importante" ###
-imprt_crs_lcl <- intatel_On$Quanto.a.localizacao.da.instituicao.o.que.voce.considera.importante
+imprt_crs_lcl <- Base_On1$Quanto.a.localizacao.da.instituicao.o.que.voce.considera.importante
 
 ### "Pensando.em.estudar.longe.de.casa..quais.beneficios.e.atrativos.uma.cidade.precisa.ter ###
-cidade <- intatel_On$Pensando.em.estudar.longe.de.casa..quais.beneficios.e.atrativos.uma.cidade.precisa.ter                                                        
+cidade <- Base_On1$Pensando.em.estudar.longe.de.casa..quais.beneficios.e.atrativos.uma.cidade.precisa.ter                                                        
 
 ### "Onde.voce.costuma.ver.anuncios.sobre.cursos.vestibulares.e.instituicoes" ###
-anunc <- intatel_On$Onde.voce.costuma.ver.anuncios.sobre.cursos.vestibulares.e.instituicoes
+anunc <- Base_On1$Onde.voce.costuma.ver.anuncios.sobre.cursos.vestibulares.e.instituicoes
 
 ### juntar as colunas separadas ###
 
-age <- as.factor(paste0(intatel_On$Qual.sua.idade,
-                        intatel_On1$Qual.sua.idade1,
-                        intatel_On2$Qual.sua.idade2))
+age <- as.factor(paste0(Base_On1$Qual.sua.idade,
+                        Base_On2$Qual.sua.idade1,
+                        Base_On3$Qual.sua.idade2))
 
-gnr <- as.factor(paste0(intatel_On$Com.qual.genero.voce.se.identifica,
-                        intatel_On$Com.qual.genero.voce.se.identifica1,
-                        intatel_On$Com.qual.genero.voce.se.identifica2))
+gnr <- as.factor(paste0(Base_On1$Com.qual.genero.voce.se.identifica,
+                        Base_On2$Com.qual.genero.voce.se.identifica1,
+                        Base_On3$Com.qual.genero.voce.se.identifica2))
 
-region <- as.factor(paste0(intatel_On$Em.qual.regiao.do.Brasil.voce.mora,
-                           intatel_On1$Em.qual.regiao.do.Brasil.voce.mora1,
-                           intatel_On2$Em.qual.regiao.do.Brasil.voce.mora2))
+region <- as.factor(paste0(Base_On1$Em.qual.regiao.do.Brasil.voce.mora,
+                           Base_On2$Em.qual.regiao.do.Brasil.voce.mora1,
+                           Base_On3$Em.qual.regiao.do.Brasil.voce.mora2))
 
-rede_soc <- as.factor(paste0(intatel_On$Quais.redes.sociais.voce.mais.utiliza,
-                             intatel_On1$Quais.redes.sociais.voce.mais.utiliza1,
-                             intatel_On2$Quais.redes.sociais.voce.mais.utiliza2)) 
+rede_soc <- as.factor(paste0(Base_On1$Quais.redes.sociais.voce.mais.utiliza,
+                             Base_On2$Quais.redes.sociais.voce.mais.utiliza1,
+                             Base_On3$Quais.redes.sociais.voce.mais.utiliza2)) 
 
-can_notic <- as.factor(paste0(intatel_On$Quais.canais.de.noticia.voce.costuma.acessar,
-                              intatel_On1$Quais.canais.de.noticia.voce.costuma.acessar1,
-                              intatel_On2$Quais.canais.de.noticia.voce.costuma.acessar2)) 
+can_notic <- as.factor(paste0(Base_On1 $Quais.canais.de.noticia.voce.costuma.acessar,
+                              Base_On2$Quais.canais.de.noticia.voce.costuma.acessar1,
+                              Base_On3$Quais.canais.de.noticia.voce.costuma.acessar2)) 
 
-lazer <- as.factor(paste0(intatel_On$Nos.momentos.de.lazer.o.que.voce.gosta.de.fazer,
-                          intatel_On1$Nos.momentos.de.lazer.o.que.voce.gosta.de.fazer1,
-                          intatel_On2$Nos.momentos.de.lazer.o.que.voce.gosta.de.fazer2))
+lazer <- as.factor(paste0(Base_On1$Nos.momentos.de.lazer.o.que.voce.gosta.de.fazer,
+                          Base_On2$Nos.momentos.de.lazer.o.que.voce.gosta.de.fazer1,
+                          Base_On3$Nos.momentos.de.lazer.o.que.voce.gosta.de.fazer2))
 
-entr <- as.factor(paste0(intatel_On$Que.tipo.de.entretenimento.voce.mais.consome,
-                         intatel_On1$Que.tipo.de.entretenimento.voce.mais.consome1,
-                         intatel_On2$Que.tipo.de.entretenimento.voce.mais.consome2))
+entr <- as.factor(paste0(Base_On1$Que.tipo.de.entretenimento.voce.mais.consome,
+                         Base_On2$Que.tipo.de.entretenimento.voce.mais.consome1,
+                         Base_On3$Que.tipo.de.entretenimento.voce.mais.consome2))
 
-env_pais <- as.factor(paste0(intatel_On$Qual.o.envolvimento.dos.seus.pais.durante.sua.preparac.o.para.o.vestibular))
+env_pais <- as.factor(paste0(Base_On1$Qual.o.envolvimento.dos.seus.pais.durante.sua.preparac.o.para.o.vestibular))
 
 
-bsc_inst_ens <- as.factor(paste0(intatel_On$Como.voce.costuma.buscar.informacoes.sobre.as.instituicoes.de.ensino.onde.voce.gostaria.de.estudar,
-                                 intatel_On1$Como.voce.costuma.buscar.informacoes.sobre.as.instituicoes.de.ensino.onde.voce.gostaria.de.estudar1,
-                                 intatel_On2$Como.voce.buscaria.informacoes.sobre.as.instituicoes.de.ensino2))
+bsc_inst_ens <- as.factor(paste0(Base_On1$Como.voce.costuma.buscar.informacoes.sobre.as.instituicoes.de.ensino.onde.voce.gostaria.de.estudar,
+                                 Base_On2$Como.voce.costuma.buscar.informacoes.sobre.as.instituicoes.de.ensino.onde.voce.gostaria.de.estudar1,
+                                 Base_On3$Como.voce.buscaria.informacoes.sobre.as.instituicoes.de.ensino2))
 
-q_atv <- as.factor(paste0(intatel_On$Quais.das.seguintes.atividades.seriam.do.seu.interesse.enquanto.estudante.de.Graduacao,
-                          intatel_On1$Quais.das.seguintes.atividades.seriam.do.seu.interesse.enquanto.estudante.de.PosGraduacao1,
-                          intatel_On2$Quais.das.seguintes.atividades.seriam.do.seu.interesse.enquanto.estudante.de.Graduacao.ou.Pos.GraduacÆo2))
+q_atv <- as.factor(paste0(Base_On1$Quais.das.seguintes.atividades.seriam.do.seu.interesse.enquanto.estudante.de.Graduacao,
+                          Base_On2$Quais.das.seguintes.atividades.seriam.do.seu.interesse.enquanto.estudante.de.PosGraduacao1,
+                          Base_On3$Quais.das.seguintes.atividades.seriam.do.seu.interesse.enquanto.estudante.de.Graduacao.ou.Pos.GraduacÆo2))
                                
 
-imprt_crs_lcl <- as.factor(paste0(intatel_On$Quanto.a.localizacao.da.instituicao.o.que.voce.considera.importante,
-                                  intatel_On1$Quanto.a.localizacao.da.instituicao.o.que.voce.considera.importante1,
-                                  intatel_On2$Quanto.a.localizacao.da.instituicao.o.que.voce.consideraria.importante2))
+imprt_crs_lcl <- as.factor(paste0(Base_On1$Quanto.a.localizacao.da.instituicao.o.que.voce.considera.importante,
+                                  Base_On2$Quanto.a.localizacao.da.instituicao.o.que.voce.considera.importante1,
+                                  Base_On3$Quanto.a.localizacao.da.instituicao.o.que.voce.consideraria.importante2))
 
 
 
