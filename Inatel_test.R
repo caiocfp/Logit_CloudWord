@@ -448,15 +448,11 @@ cor(imprt_crs_rnm,
     qualiNovInd, use = "complete.obs")
 ##mineracao de palavras##
 
-library(sentimentr)
-library(qdap)
-library(wordcloud)
-library(plotrix)
-library(dendextend)
-library(ggthemes)
-library(Rweka)
-library(ggplot2)
-library(tm)
+pacotes <- c("sentimentr","qdap","wordcloud","plotrix","dendextend","ggthemes", "Rweka",
+             "ggplot2", "tm")
+
+lapply(pacotes, library, character.only = T)
+
 
 
 #principais palavras por resposta#
